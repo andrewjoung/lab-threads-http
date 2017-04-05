@@ -18,6 +18,18 @@ import java.util.Scanner;
  */
 public class MovieDownloader {
 
+
+	/*HttpURLConnection: essentially the HttpURLConnection is a class used to read the movie search 
+	  from the user and the URL associated with that movie. It converts the ombdapi URL and converts it into a 
+	  HttpURLConnection instance which is later used to connect to the omdbapi API to retrieve the data that the user
+	  is searching for 
+
+	  inputStream/BufferedReader: The inputStream is what is used to get and read the data retrieved from the HttpURLConnection.
+	  When the InputStream instance is created, it retrieves the data and stores it in some sort of data structure which is then
+	  used by BufferedReader to navigate through the different movies. The BufferedReader comes with methods such as readLine() to 
+	  navigate and read through each line of data which is then stored in a new Array in JSON format. 
+	*/
+
 	public static String[] downloadMovieData(String movie) {
 
 		//construct the url for the omdbapi API
